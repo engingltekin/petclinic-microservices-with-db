@@ -16,6 +16,6 @@ echo 'Building App QA Images'
 echo "Pushing App QA Images to ECR Repo"
 . ./jenkins/push-qa-docker-images-to-ecr.sh
 echo 'Deploying App on Kubernetes Cluster'
-. ./infrastructure/ansible/scripts/deploy_app_on_qa_environment.sh
+. ./ansible/scripts/deploy_app_on_qa_environment.sh
 echo 'Deleting all local images'
 docker image prune -af
